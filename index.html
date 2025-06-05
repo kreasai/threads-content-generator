@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Threads Content Generator v2.4</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 sm:p-6">
+  <!-- Pastikan container memiliki mx-auto untuk centering jika body adalah flex container -->
+  <div class="container mx-auto p-6 sm:p-8 bg-white rounded-xl smooth-shadow">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl font-bold text-gray-800">Threads Content Generator ✨</h1>
+      <p class="text-gray-600 mt-2">Buat konten threads menarik dengan mudah!</p>
+    </header>
+
+    <div class="space-y-6">
+      <div>
+        <label for="idea" class="block text-sm font-medium text-gray-700 mb-1">Ide Konten Utama:</label>
+        <textarea id="idea" rows="4" class="w-full p-3 border rounded-lg input-field" placeholder="Contoh: Tips produktif bekerja dari rumah"></textarea>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label for="tone" class="block text-sm font-medium text-gray-700 mb-1">Gaya Bahasa:</label>
+          <select id="tone" class="w-full p-3 border rounded-lg input-field">
+            <option value="santai dan bersahabat">Santai & Bersahabat</option>
+            <option value="profesional dan informatif">Profesional & Informatif</option>
+            <option value="persuasif dan meyakinkan">Persuasif & Meyakinkan</option>
+            <option value="edukatif dan mendalam">Edukasi & Mendalam</option>
+            <option value="humoris dan ringan">Humor & Ringan</option>
+            <option value="inspiratif dan memotivasi">Inspiratif & Memotivasi</option>
+          </select>
+        </div>
+        <div>
+          <label for="numThreads" class="block text-sm font-medium text-gray-700 mb-1">Jumlah Threads (1-10):</label>
+          <input type="number" id="numThreads" min="1" max="10" value="3" class="w-full p-3 border rounded-lg input-field" placeholder="Default: 3">
+        </div>
+      </div>
+
+      <button onclick="generateThreads()" class="w-full btn-primary text-white font-semibold py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+        🚀 Generate Konten
+      </button>
+    </div>
+
+    <div class="mt-10" id="threadOutputContainer">
+      <h2 class="text-xl font-semibold text-gray-700 mb-4 sr-only" id="outputTitle">Hasil Konten Threads:</h2>
+      <div id="threadOutput" class="space-y-4">
+        <!-- Hasil threads akan ditampilkan di sini -->
+         <p class="text-center text-gray-500">Hasil akan muncul di sini setelah Anda generate.</p>
+      </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 3rem; padding: 1rem 0; font-size: 0.9rem; color: #6c757d;">
+  Tools oleh <a href="https://www.kreasai.com" target="_blank" style="color: #000080; font-weight: 600; text-decoration: none;">KREASAI.COM</a>
+</footer>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
